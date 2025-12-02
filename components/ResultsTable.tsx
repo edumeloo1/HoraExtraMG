@@ -1,10 +1,10 @@
 import React from 'react';
 import { TimeSheetData } from '../types';
 import { Copy, Check, FileSpreadsheet } from 'lucide-react';
-import * as XLSX_Module from 'xlsx';
+import * as XLSX_Style from 'xlsx-js-style';
 
-// Safety check for different module export formats (ESM vs CJS)
-const XLSX = (XLSX_Module as any).default || XLSX_Module;
+// Ensure compatibility with ES imports and CommonJS
+const XLSX = (XLSX_Style as any).default || XLSX_Style;
 
 interface ResultsTableProps {
   data: TimeSheetData[];
