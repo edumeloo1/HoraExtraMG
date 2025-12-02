@@ -1,9 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { TimeSheetData } from "../types";
 
-// Initialize Gemini Client
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 const SYSTEM_INSTRUCTION = `
 Você é o sistema "Mendonça Galvão – Hora Extra", especialista em ler espelhos de ponto eletrônico.
 Sua missão é extrair dados de Faltas, Horas Extras e Adicional Noturno de imagens ou PDFs de espelhos de ponto.
@@ -36,6 +33,9 @@ export const processTimeSheetFile = async (
   mimeType: string
 ): Promise<TimeSheetData[]> => {
   try {
+    // Initialize Gemini Client here to ensure API_KEY is available and prevent top-level crashes
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: {
@@ -89,6 +89,6 @@ export const processTimeSheetFile = async (
     return [];
   } catch (error) {
     console.error("Error processing file with Gemini:", error);
-    throw new Error("Falha ao processar o documento. Verifique se é uma imagem ou PDF válido.");
+    throw new Error("Falha ao processar o documento. Verifique se a chave de API está configurada e se o arquivo é válido.");
   }
 };
