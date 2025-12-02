@@ -8,14 +8,14 @@ interface FileUploaderProps {
 
 export const FileUploader: React.FC<FileUploaderProps> = ({ onFilesSelected, isProcessing }) => {
   
-  const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+  const handleDrop = useCallback((e: React.DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
     if (!isProcessing && e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       onFilesSelected(e.dataTransfer.files);
     }
   }, [isProcessing, onFilesSelected]);
 
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (e: React.DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
   };
 
