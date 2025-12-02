@@ -19,3 +19,10 @@ O **Mendonça Galvão – Hora Extra** é um sistema alimentado por IA (via Goog
 - Gera uma **planilha consolidada** pronta para uso em **Excel** ou **Google Sheets**.
 
 Ideal para departamentos pessoais e escritórios de contabilidade que precisam agilizar o controle de horas extras e faltas.
+
+Este projeto é de uso interno da Mendonça Galvão.  
+A redistribuição ou uso por terceiros deve ser autorizada previamente.
+💬 Contato
+Responsável: Mendonça Galvão / Eduardo Melo - Núcleo Digital
+
+E-mail: eduardo.melo@mendoncagalvao.com.br
