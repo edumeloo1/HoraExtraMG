@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Mendonça Galvão – Hora Extra
 
-# Run and deploy your AI Studio app
+Sistema de leitura de espelhos de ponto e geração de planilhas de **faltas**, **horas extras** (50% e 100%) e **adicional noturno**, pensado para as empresas **Jappa, Sushi Express, Jhou e Masa**.
 
-This contains everything you need to run your app locally.
+Identidade visual: **preto**, **prata** e **dourado**, com foco em uma experiência intuitiva, bonita e profissional.
 
-View your app in AI Studio: https://ai.studio/apps/drive/16Et7v1wsxxeaJv5EpITLJsJ7xY1c0IWd
+---
 
-## Run Locally
+## ✨ Visão geral
 
-**Prerequisites:**  Node.js
+O **Mendonça Galvão – Hora Extra** é um sistema alimentado por IA (via Google AI Studio / Gemini) que:
 
+- Lê **espelhos de ponto** (PDF ou texto extraído);
+- Identifica **faltas reais** por funcionário;
+- Usa o bloco de **RESUMO** do espelho para buscar:
+  - Horas extras **50%**  
+  - Horas extras **100%**  
+  - **Adicional noturno**
+- Gera uma **planilha consolidada** pronta para uso em **Excel** ou **Google Sheets**.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Ideal para departamentos pessoais e escritórios de contabilidade que precisam agilizar o controle de horas extras e faltas.
